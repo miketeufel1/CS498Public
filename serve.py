@@ -13,7 +13,7 @@ def get_ip():
 @app.route('/', methods=['POST'])
 def stress_cpu():
     # Run the stress CPU script as a separate process
-    subprocess.Popen(["python", "stress_cpu.py"])
+    subprocess.Popen(["python3", "stress_cpu.py"])
     return jsonify(status="CPU stress test started")
 
 if __name__ == '__main__':
